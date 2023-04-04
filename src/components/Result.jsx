@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 
 
 const Result = (props) => {
@@ -7,7 +8,10 @@ const Result = (props) => {
         <section>
             <h2>Resultat</h2>
             <p>Du fick {props.score} rätta svar</p>
-            <button onClick={() => props.restart()}>Börja om</button>
+            <Link to='/'>
+                <button onClick={() => props.restart()}>Börja om</button>
+            </Link>
+            
         </section>
     );
 }
